@@ -1,5 +1,5 @@
 Django==1.6.2
-South==0.8.2
+South==0.8.4
 argparse==1.2.1
 cloudinary==1.0.13
 distribute==0.7.3
@@ -11,6 +11,7 @@ django-debug-toolbar==1.0.1
 django-toolbelt==0.0.1
 django-vanilla-views==1.0.2
 gunicorn==18.0
+poster==0.8.2
 psycopg2==2.5.2
 pystache==0.5.3
 six==1.5.2
