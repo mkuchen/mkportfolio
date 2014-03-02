@@ -1,0 +1,84 @@
+{% load cloudinary %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Ambassador App</title>
+	    {% load staticfiles %}
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+	    <link rel="stylesheet" href="{% static 'css/libs/reset.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/libs/bootstrap.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/base/base.css' %}">	    
+	    {% block stylesheets %}{% endblock %}
+	    <!--[if IE]>
+	        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body id="home">
+		<div id="wrapper-outer">
+			<div id="header-outer" class="col-md-2" style="{% if not slide %}left:0;{% endif %}">
+				<div id="header-inner">
+					<div id="logo-block">
+						<div id="logo-container">
+							<strong class="logo-1">
+								<a href="/"></a>
+							</strong>
+							<h1> Grow the web with referrals! </h1>
+						</div>
+					</div>
+					<ul id="header-list">
+						<li id="one" {% if one %} style="border-left: 16px solid #3276b1;border-bottom: 2px solid #3276b1;" {% endif %}><a href="/home/"> My Referrals </a></li>
+						<li id="two" {% if two %} style="border-left: 16px solid #3276b1;border-bottom: 2px solid #3276b1;" {% endif %}><a href="/profile/{{user.username}}/"> My Profile </a></li>
+						<li id="three" {% if three %} style="border-left: 16px solid #3276b1;border-bottom: 2px solid #3276b1;" {% endif %}><a href="/create/" id="three"> New Referral </a></li>
+					</ul>
+					<div id="profile-block">
+						<div id="picture-block">
+							<p style="margin-bottom:4px;"><span id="name"> {{member.user.first_name}} {{member.user.last_name}} </span></p>
+							{% if not member.profile_image %}
+							<img id="profile-image" src="http://livestockportal.co.ke/img/blank_profile.png" alt="profile-pic" width="120" height="120">
+							{% else %}
+							<img id="profile-image" src="{{ member.profile_image.url }}" alt="profile-pic" width="120" height="120">
+							{% endif %}
+						</div>
+						<div id="profile-text">
+							{% if member.quote %}
+							<img id="quote-left" src="{% static 'img/quotation-marks-left.png' %}" width="20" height="20">
+							<span id="quote">
+								<p>
+									{{member.quote}}
+								</p>
+							</span>
+							<img id="quote-left" src="{% static 'img/quotation-marks-right.png' %}" width="20" height="20">
+							{% endif %}
+							<a href="/profile/{{member.user.username}}/" style="padding-left:2px;float:left"> edit profile </a>
+							<a href="/logout" id="logout" style="display:block;float:right"> Logout </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="content-main">
+				{% block content %} {% endblock %}
+			</div>
+		</div>
+		{% block modals %}{% endblock %}
+
+		<script type="text/javascript" src="{% static 'js/libs/jquery-1.10.2.min.js' %}" charset="utf-8"></script>
+		<script type="text/javascript" src="{% static 'js/libs/bootstrap.min.js' %}" charset="utf-8"></script>
+		<script type="text/javascript" src="{% static 'js/libs/jquery.dataTables.min.js' %}" charset="utf-8"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
+		{% if slide %}
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// nav slide in
+				$("div#header-outer").animate( {left:'0'}, 1600 );
+			});
+		</script>
+		{% endif %}
+		{% block javascript %}
+
+		{% endblock %}
+	</body>
+</html>
