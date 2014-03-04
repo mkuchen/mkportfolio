@@ -10,7 +10,6 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.decorators import method_decorator
 from django.views.decorators.http import require_POST
 from django.views.generic import View
-from django_datatables_view.base_datatable_view import BaseDatatableView
 
 from braces.views import AjaxResponseMixin, JSONResponseMixin
 from cloudinary.forms import cl_init_js_callbacks
@@ -59,7 +58,7 @@ class HomeView(View):
 	template_name = 'base/home.html'
 
 	def get(self, request, *args, **kwargs):
-		member = Member.objects.get(user=request.user)
+		member = Member.objects.get(pk=1)
 		context = {
 					'member':member,
 					'one':'true'

@@ -2,6 +2,8 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -80,6 +82,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+
 # Static asset configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
@@ -95,3 +99,7 @@ TEMPLATE_DIRS = (
     "/usr/local/lib/python2.7/dist-packages/django_debug_toolbar-1.0.1-py2.7.egg/debug_toolbar/templates",
     os.path.join(SETTINGS_PATH, 'templates'),
 )
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')

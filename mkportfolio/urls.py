@@ -10,7 +10,7 @@ from base.views import HomeView, LoginAuthView, LogoutView
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^/', HomeView.as_view(), name='home'),
+    url(r'^$', HomeView.as_view(), name='home'),
     url(r'^login-auth/$', LoginAuthView.as_view(), name='auth'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     #url(r'^admin/', include(admin.site.urls)),
