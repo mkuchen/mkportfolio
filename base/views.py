@@ -61,7 +61,7 @@ class HomeView(View):
 		member = Member.objects.get(pk=1)
 		context = {
 					'member':member,
-					'one':'true'
+					'one':'true',
 				}
 		if request.GET.get('slide', ''):
 			context['slide'] = True

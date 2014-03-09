@@ -15,6 +15,83 @@ div#form-block {
 	border: 3px solid #fff;
 }
 
-form img {
+div.content-block {
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	background: white;
+	padding: 12px;
+	margin-left: 12px;
+	margin-top: 20px;
+	width: 100%;
+}
 
+div#profile-main {
+	display: inline-block;
+	border-radius: 3px;
+	padding: 12px 38px 18px;
+	margin-left: 12px;
+	margin-top: 20px;
+	border: 1px solid gray;
+	width: 100%;
+	border-left: 0;
+	border-right: 0;
+}
+
+div#profile-main h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: RalewayRegular;
+	font-size: 16px;
+	color: #FE5A1D;
+	top: -21px;
+	left: -8px;
+	position: relative;
+	background: #E8EDE0;
+	float: left;
+	padding: 0 6px;
+}
+
+div#profile-main div#column-left {
+	display: inline-block;
+	float: left;
+	width: 20%;
+}
+
+div#profile-main div#column-left p{
+	font-size: 14px;
+}
+
+div#profile-main div#column-right {
+	display: inline-block;
+	float: left;
+	width: 70%;
+}
+
+div#profile-main div#column-right p{
+	font-size: 14px;
+}
+
+div#profile-main div#column-right ul li {
+	font-size: 14px;
+}
+
+div#profile-main div#column-right ul li span {
+	text-decoration: underline;
+}
+
+#social {
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 180px;
+}
+
+#social a {
+	text-decoration: none;
+	margin-left: 15px;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	color: #fff;
+	float: left;
+	display: inline-block;
 }
