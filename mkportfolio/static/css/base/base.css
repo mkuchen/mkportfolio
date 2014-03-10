@@ -34,6 +34,19 @@
 	src: url('/static/fonts/AftaSerifThin-Regular.otf')
 }
 
+@font-face
+{
+	font-family: DejaVu;
+	src: url('/static/fonts/DejaVuSerif.ttf')
+}
+
+@font-face
+{
+	font-family: DejaVuCondensed;
+	src: url('/static/fonts/DejaVuSerifCondensed.ttf')
+}
+
+
 html {
 	height: 100%;
 	width: 100%;

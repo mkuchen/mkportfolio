@@ -15,14 +15,50 @@ div#form-block {
 	border: 3px solid #fff;
 }
 
+div#header-container {
+	background-image: url('http://wallpaperpassion.com/upload1/32058/knex-wallpaper.jpg');
+	display: inline-block;
+	width: 100%;
+	height: 140px;
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+}
+
+div#portfolio-list {
+	width: 22%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	padding: 12px;
+	padding-right: 30px;
+	margin-top: 26px;
+	border-right: 1px solid lightgray;
+	text-align: right;
+}
+
+div#portfolio-list h3 {
+	margin-top: 0;
+	font-family: DejaVuCondensed;
+	font-weight: bold;
+	font-size: 26px;
+}
+
 div.content-block {
 	border-top: 1px solid lightgray;
-	border-bottom: 1px solid lightgray;
-	background: white;
+	/*background: white;*/
 	padding: 12px;
 	margin-left: 12px;
 	margin-top: 20px;
-	width: 100%;
+	width: 72%;
+	float: right;
+}
+
+div.content-block p {
+	font-size: 17px!important;
+	font-family: DejaVuCondensed;
+	color: #102E37;
+	margin: 0 0 20px;
 }
 
 div#profile-main {
