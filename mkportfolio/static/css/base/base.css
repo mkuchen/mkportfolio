@@ -396,7 +396,9 @@ div#wrapper-outer div#content-main {
 
 div#wrapper-outer div#content-main p {
 	font-size: 13px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+	line-height: 28px
 }
 
 div#wrapper-outer div#content-main div#header {
