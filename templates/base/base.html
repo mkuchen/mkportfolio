@@ -26,13 +26,13 @@
 							<img id="profile-image" src="{% static 'img/mitch.jpg' %}" alt="profile-pic" width="150" height="150">
 						</div>
 						<div id="profile-text">
-							<img id="quote-left" src="{% static 'img/quotation-marks-left.png' %}" width="20" height="20">
+							<div id="quote-left"></div>
 							<span id="quote">
-								<p style="margin-bottom:4px;font-size:16px">
+								<p style="margin-bottom:4px;">
 									Developer.  Music lover.  Fitness enthusiast.
 								</p>
 							</span>
-							<img id="quote-right" src="{% static 'img/quotation-marks-right.png' %}" width="20" height="20">
+							<div id="quote-right"></div>
 						</div>
 					</div>
 					<div id="social">
@@ -47,10 +47,47 @@
 						</a>
 					</div>
 					<ul id="header-list">
-						<li id="one" {% if one %} style="border-right: 16px solid #3276b1;border-bottom: 1px solid #3276b1;" {% endif %}><a href="/home/"> About </a></li>
-						<li id="two" {% if two %} style="border-right: 16px solid #3276b1;border-bottom: 1px solid #3276b1;" {% endif %}><a href="/profile/{{user.username}}/"> Portfolio </a></li>
-						<li id="three" {% if three %} style="border-right: 16px solid #3276b1;border-bottom: 2px solid #3276b1;" {% endif %}><a href="/create/" id="three"> Articles </a></li>
+						<li id="one" {% if one %} style="border-right: 16px solid #3276b1;" {% endif %}><a href="/home/"> About </a></li>
+						<li id="two" {% if two %} style="border-right: 16px solid #3276b1;" {% endif %}><a href="/profile/{{user.username}}/"> Portfolio </a></li>
+						<li id="three" {% if three %} style="border-right: 16px solid #3276b1;" {% endif %}><a href="/create/" id="three"> Articles </a></li>
 					</ul>
+					<div id="portfolio-list">
+						<h3> Portfolio </h3>
+						<ul role="menu" aria-labelledby="dLabel">
+							<li class="dropdown sub-hover">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 1<i class="icon-arrow-right"></i></a>
+								<ul class="dropdown-menu sub-menu">
+									<li>
+										<div class="project-outline">
+
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="dropdown sub-hover">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 2<i class="icon-arrow-right"></i></a>
+								<ul class="dropdown-menu sub-menu">
+									<li>
+										<div class="project-outline">
+
+										</div>
+									</li>
+								</ul>
+							</li>
+
+							<li class="dropdown sub-hover">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 3<i class="icon-arrow-right"></i></a>
+								<ul class="dropdown-menu sub-menu">
+									<li>
+										<div class="project-outline">
+
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 			</div>
