@@ -9,6 +9,7 @@
 		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
 	    <link rel="stylesheet" href="{% static 'css/libs/reset.css' %}">
 	    <link rel="stylesheet" href="{% static 'css/libs/bootstrap.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/libs/bootstrap-responsive.css' %}">
 	    <link rel="stylesheet" href="{% static 'css/base/base.css' %}">	 
 	    {% block stylesheets %}{% endblock %}
 	    <!--[if IE]>
@@ -18,79 +19,34 @@
 
 	<body id="home">
 		<div id="wrapper-outer">
-			<div id="header-outer" class="col-md-2" style="{% if not slide %}left:0;{% endif %}">
+			<div id="header-outer">
 				<div id="header-inner">
 					<div id="profile-block">
 						<div id="picture-block">
-							<p id="name"> Mitch Kuchenberg </p>
-							<img id="profile-image" src="{% static 'img/mitch.jpg' %}" alt="profile-pic" width="150" height="150">
-						</div>
-						<div id="profile-text">
-							<div id="quote-left"></div>
-							<span id="quote">
-								<p style="margin-bottom:4px;">
-									Developer.  Music lover.  Fitness enthusiast.
-								</p>
-							</span>
-							<div id="quote-right"></div>
+							<p id="name"> Mitchell Kuchenberg </p>
+							<img id="profile-image" src="{% static 'img/mitch.jpg' %}" alt="profile-pic" width="50" height="50">
 						</div>
 					</div>
 					<div id="social">
 						<a href="https://github.com/mkuchen/">
-							<i class="fa fa-github fa-3x"> </i>
+							<i class="fa fa-github fa-2x"> </i>
 						</a>
 						<a href="https://twitter.com/MGKuchenberg">
-							<i class="fa fa-twitter fa-3x"></i>
+							<i class="fa fa-twitter fa-2x"></i>
 						</a>
 						<a href="http://www.linkedin.com/pub/mitch-kuchenberg/62/ab1/985">
-							<i class="fa fa-linkedin fa-3x"></i>
+							<i class="fa fa-linkedin fa-2x"></i>
 						</a>
 					</div>
 					<ul id="header-list">
-						<li id="one" {% if one %} style="border-right: 16px solid #3276b1;" {% endif %}><a href="/home/"> About </a></li>
-						<li id="two" {% if two %} style="border-right: 16px solid #3276b1;" {% endif %}><a href="/profile/{{user.username}}/"> Portfolio </a></li>
-						<li id="three" {% if three %} style="border-right: 16px solid #3276b1;" {% endif %}><a href="/create/" id="three"> Articles </a></li>
+						<li id="one"><a href="/home/"> About </a></li>
+						<li id="two"><a href="/profile/{{user.username}}/"> Portfolio </a></li>
+						<li id="three"><a href="/create/" id="three"> Articles </a></li>
 					</ul>
-					<div id="portfolio-list">
-						<h3> Portfolio </h3>
-						<ul role="menu" aria-labelledby="dLabel">
-							<li class="dropdown sub-hover">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 1<i class="icon-arrow-right"></i></a>
-								<ul class="dropdown-menu sub-menu">
-									<li>
-										<div class="project-outline">
-
-										</div>
-									</li>
-								</ul>
-							</li>
-							
-							<li class="dropdown sub-hover">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 2<i class="icon-arrow-right"></i></a>
-								<ul class="dropdown-menu sub-menu">
-									<li>
-										<div class="project-outline">
-
-										</div>
-									</li>
-								</ul>
-							</li>
-
-							<li class="dropdown sub-hover">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 3<i class="icon-arrow-right"></i></a>
-								<ul class="dropdown-menu sub-menu">
-									<li>
-										<div class="project-outline">
-
-										</div>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+					
 				</div>
-
 			</div>
+
 			<div id="content-main">
 				{% block content %} {% endblock %}
 			</div>
