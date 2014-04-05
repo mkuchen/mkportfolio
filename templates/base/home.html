@@ -5,10 +5,67 @@
 {% block stylesheets %}
 	<link rel="stylesheet" href="{% static 'css/base/home.css' %}">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://use.typekit.net/c/1be1ef/adobe-garamond-pro:i4:n4:n6,futura-pt:n7,futura-pt-condensed:n5:n8.Xs1:M:2,Xs2:M:2,Xs3:M:2,SH5:M:2,WGz:M:2,WH3:M:2/d?3bb2a6e53c9684ffdc9a9bff1d5b2a62ce701868d0308661d1fbefe22ed0a9f2232ce784a82ac7c1298b74a6ebbca04098e7fd598b33831fd5ad7ba54dfa8b3718079d7fc71597fdee361003d8be07ca3a0e274d9ab69f766de3796d9e39b16de03febc564be47e317e338d3fb14c6e6f21235ea448258e70449bcfd4eabf05a97622b083078cf5e0be9c7cc9e145a2557c0ed644d904d9e2dd55cfdcb879d3e0abda43a78e7fb8ac1ca88dac04f3be2687ab5c0354648549db47470a3a5a11f7ce9f6be14">
+	<style type="text/css">.tk-futura-pt{font-family:"futura-pt",sans-serif;}.tk-futura-pt-condensed{font-family:"futura-pt-condensed",sans-serif;}.tk-adobe-garamond-pro{font-family:"adobe-garamond-pro",sans-serif;}</style>
+	<script src="{% static 'js/libs/modernizr-2.6.1.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'js/libs/prp2ymo.js' %}"></script>
+	<script>
+    	try{Typekit.load();}catch(e){}
+  	</script>
 {% endblock %}
 
 {% block content %}
-	<div id="banner-outer">
+	<div class="row wrapper" style="height:400px">
+		<div id="main-banner">
+			<section class="purple-bg hero">
+				<div aria-hidden="true" class="globe" style="-webkit-transform: translateY(-3.94%);"></div>
+			<h3>
+				<span class="small">
+					My name is
+				</span>
+				<span class="arced">
+					<span class="char1">M</span> <!-- 1 -->
+					<span class="char1">i</span> <!-- 2 -->
+					<span class="char2">t</span> <!-- 3 -->
+					<span class="char2">c</span> <!-- 4 -->
+					<span class="char3">h</span> <!-- 5 -->
+					<span class="char4">&nbsp;</span> <!-- 6 -->
+					<span class="char4">K</span> <!-- 7 -->
+					<span class="char5">u</span> <!-- 8 -->
+					<span class="char5">c</span> <!-- 9 -->
+					<span class="char6">h</span> <!-- 10 -->
+					<span class="char7">e</span> <!-- 11 -->
+					<span class="char7">n</span> <!-- 12 -->
+					<span class="char8">b</span> <!-- 13 -->
+					<span class="char9">e</span> <!-- 14 -->
+					<span class="char10">r</span> <!-- 15 -->
+					<span class="char10">g</span> <!-- 16 -->
+				</span>
+				<span class="small">
+					and I build cool stuff with Python and Django
+				</span>
+			</h3>
+		</section>
+		</div>
+	</div>
+	<div class="row" id="top-text">
+		<div class="span3">
+			<p>
+				"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+			</p>
+		</div>
+		<div class="span3">
+			<p>
+				"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+			</p>
+		</div>
+		<div class="span3">
+			<p>
+				"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+			</p>
+		</div>
+	</div>
+	<!--<div id="banner-outer">
 		<div id="banner-container">
 			<h1> My name is Mitch.  I build things. </h1>
 			<img id="profile-image-2" src="{% static 'img/mitch2.jpg' %}" alt="profile-pic" width="" height="">
@@ -22,8 +79,8 @@
 			</div>
 			
 		</div>
-	</div>
-	
+	</div>-->
+	<!--
 	<div id="profile-main">
 		<h2> Qualifications </h2><br>
 		<div id="column-left">
@@ -42,5 +99,49 @@
 		</div>
 	</div>
 
+	<div id="portfolio-list">
+		<h3> Portfolio </h3>
+		<ul role="menu" aria-labelledby="dLabel">
+			<li class="dropdown sub-hover">
+				<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 1<i class="icon-arrow-right"></i></a>
+				<ul class="dropdown-menu sub-menu">
+					<li>
+						<div class="project-outline">
 
+						</div>
+					</li>
+				</ul>
+			</li>
+			
+			<li class="dropdown sub-hover">
+				<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 2<i class="icon-arrow-right"></i></a>
+				<ul class="dropdown-menu sub-menu">
+					<li>
+						<div class="project-outline">
+
+						</div>
+					</li>
+				</ul>
+			</li>
+
+			<li class="dropdown sub-hover">
+				<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown 3<i class="icon-arrow-right"></i></a>
+				<ul class="dropdown-menu sub-menu">
+					<li>
+						<div class="project-outline">
+
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>-->
+
+
+{% endblock %}
+
+{% block javascript %}
+	<script src="{% static 'js/libs/plugins.js' %}" type="text/javascript"></script>
+	<script src="{% static 'js/libs/address.js' %}"></script>
+	<script src="{% static 'js/libs/main.js' %}" type="text/javascript"></script>
 {% endblock %}
