@@ -147,7 +147,8 @@ div#wrapper-outer {
 
 div#wrapper-outer div#header-outer {
 	width: 100%;
-	background-color: rgba(16,46,55,0.95);
+	/*background-color: rgba(16,46,55,0.95);*/
+	background: #222222;
 	position: relative;
 	z-index: 9999;
 	float: center;
