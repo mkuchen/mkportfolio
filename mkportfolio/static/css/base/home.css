@@ -10,7 +10,7 @@ h2#home {
 }
 
 div#top-text {
-	margin-top: 30px;
+	margin-top: 66px;
 	width: 1100px!important;
 	float: center;
 	margin-left: auto;
@@ -493,22 +493,22 @@ h3 {
 }
 
 .wrapper {
--webkit-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
--moz-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
--ms-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
--o-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
--webkit-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
--moz-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
--ms-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
--o-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
--webkit-perspective: 800;
--moz-perspective: 800;
--ms-perspective: 800;
--o-perspective: 800;
-perspective: 800;
--webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
--moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-webkit-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
+	-moz-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
+	-ms-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
+	-o-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
+	transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
+	-webkit-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
+	-moz-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
+	-ms-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
+	-o-transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
+	transition-timing-function: cubic-bezier(0.865,-0.15,0.085,1.21);
+	-webkit-perspective: 800;
+	-moz-perspective: 800;
+	-ms-perspective: 800;
+	-o-perspective: 800;
+	perspective: 800;
+	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
 }
