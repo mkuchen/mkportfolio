@@ -1,0 +1,45 @@
+{% extends "base/base.html" %}
+
+{% load staticfiles %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{% static 'css/base/portfolio.css' %}">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="{% static 'js/libs/modernizr-2.6.1.min.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+	<div class="wrapper">
+		<div id="main-banner">
+			<section class="purple-bg hero">
+				<!--<div aria-hidden="true" class="globe"></div>-->
+				<h3 class="banner-text">
+					<span class="arced">
+						<span class="char">My&nbsp;&nbsp;Work</span>
+					</span>
+				</h3>
+			</section>
+		</div>
+		<div id="hero-bottom"></div>
+	</div>
+	<div class="row" id="top-text">
+		<h3 class="row-header"> Previous Projects </h3>
+		<p>
+			This page is currently under construction!  Stay tuned for updates.
+		</p>
+	</div>
+
+
+{% endblock %}
+
+
+{% block javascript %}
+	<script src="{% static 'js/libs/plugins.js' %}" type="text/javascript"></script>
+	<script src="{% static 'js/libs/address.js' %}"></script>
+	<script src="{% static 'js/libs/main.js' %}" type="text/javascript"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+		    $( ".char" ).css( "visibility", "visible" ).css( "opacity", "1").css( "top", "0");
+		});
+	</script>
+{% endblock %}

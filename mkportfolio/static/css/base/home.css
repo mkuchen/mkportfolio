@@ -10,7 +10,7 @@ h2#home {
 }
 
 div#top-text {
-	margin-top: 66px;
+	margin-top: 26px;
 	width: 1100px!important;
 	float: center;
 	margin-left: auto;
@@ -19,9 +19,35 @@ div#top-text {
 
 div#top-text p {
 	text-align: justify;
-	font-size: 13px;
+	font-size: 18px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	line-height: 20px;
+	line-height: 26px;
+}
+
+div#top-text div#left {
+	margin-right: 120px;
+	margin-left: 120px;
+}
+
+h3.row-header {
+	color: #222222;
+	font-size: 32px;
+	font-family: RalewayExtraBold, sans-serif;
+	padding-top: 32px;
+	position: relative;
+	text-transform: uppercase;
+	text-align: left;
+	margin-bottom: 28px;
+}
+
+h3.row-header:before {
+	background: #222222;
+	content: "";
+	height: 8px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 64px;
 }
 
 div#form-block {
@@ -155,9 +181,7 @@ div#main-banner h3 {
 	line-height: 1;
 }
 
-h3 {
-	color: #4c3d6d;
-	font-family: "futura-pt-condensed","Futura PT Condensed","Arial Narrow";
+h3.banner-text {
 	font-size: 144px;
 	font-size: 6rem;
 	margin: .25em 0;
@@ -195,7 +219,7 @@ h3 {
 	bottom: auto;
 	top: 32px;
 }
-
+/*
 .hero:before, .hero:after {
 	background: url(/static/img/big-dash.png) repeat;
 	bottom: 32px;
@@ -208,7 +232,7 @@ h3 {
 	right: 0;
 	width: 100%;
 }
-
+*/
 .hero:after {
 	background: url(/static/img/big-dash.png) repeat;
 	bottom: 32px;
@@ -260,7 +284,19 @@ h3 {
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	opacity: 1;
 	visibility: visible;
-	color: #0d0d0d;
+	color: #222222;
+}
+
+.hero h3 .small {
+	display: block;
+	font-family: RalewayRegular, sans-serif;
+	color: #222222;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 8px;
+	text-transform: none;
+	visibility: visible;
 }
 
 .hero h3 .small:nth-child(1) {
@@ -276,25 +312,13 @@ h3 {
 	padding-top: 64px;
 }
 
-.hero h3 .small {
-	display: block;
-	font-family: RalewayRegular, sans-serif;
-	color: #0d0d0d;
-	font-size: 48px;
-	font-size: 2rem;
-	font-weight: 400;
-	line-height: 1;
-	text-transform: none;
-	visibility: visible;
-}
-
 .hero h3 .arced {
 	display: block;
 	font-family: RalewayExtraBold, sans-serif;
-	font-size: 120px;
-	font-size: 5rem;
+	font-size: 82px;
+	font-weight: 600;
 	line-height: 1;
-	letter-spacing: .1em;
+	letter-spacing: 7px;
 	padding: .6em 0 .6em;
 	text-shadow: 8px 8px rgba(0,0,0,0.3);
 }
@@ -493,6 +517,7 @@ h3 {
 }
 
 .wrapper {
+	width: 100%;
 	-webkit-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
 	-moz-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);
 	-ms-transition: all 800ms cubic-bezier(0.865,-0.15,0.085,1.21);

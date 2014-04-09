@@ -7,10 +7,16 @@
 	    <title>Ambassador App</title>
 	    {% load staticfiles %}
 		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
-	    <link rel="stylesheet" href="{% static 'css/libs/reset.css' %}">
-	    <link rel="stylesheet" href="{% static 'css/libs/bootstrap-combined.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/libs/reset.css' %}" />
+	    <link rel="stylesheet" href="{% static 'css/base/base.css' %}" />
 	    <link rel="stylesheet" href="{% static 'css/libs/bootstrap-responsive.css' %}">
-	    <link rel="stylesheet" href="{% static 'css/base/base.css' %}">	 
+	    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<script type="text/javascript" src="{% static 'js/libs/jquery-1.10.2.min.js' %}" charset="utf-8"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	    <script src="{% static 'js/libs/modernizr-2.6.1.min.js' %}" type="text/javascript"></script>
 	    {% block stylesheets %}{% endblock %}
 	    <!--[if IE]>
 	        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,16 +45,16 @@
 						</a>
 					</div>
 					<ul id="header-list">
-						<li class="main-item" style="width:104px"><a class="main-link" href="#"> About </a></li>
-						<li class="main-item" style="width:117px"><a class="main-link" href="#"> Articles </a></li>
+						<li class="main-item" style="width:104px"><a class="main-link{% if page == 'home' %} active{% endif %}" href="/"> About </a></li>
+						<!--<li class="main-item" style="width:117px"><a class="main-link{% if 'page' == 'home' %} active{% endif %}" href="#"> Articles </a></li>-->
 						<li class="dropdown main-item">
-							<a data-toggle="dropdown" class="dropdown-toggle main-link" href="#"> Portfolio <b class="caret"></b></a>
+							<a data-toggle="dropdown" class="dropdown-toggle main-link {% if page == 'portfolio' %} active{% endif %}" href="/portfolio/"> Portfolio <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><p class="large-txt">Ambassador's Engineering Challenge</p> <p class="small-txt">Python/Django</p></a></li>
+								<li class="portfolio-item"><a href="#"><p class="large-txt">Ambassador's Engineering Challenge</p> <p class="small-txt">Python/Django</p></a></li>
 								<li class="divider"></li>
-								<li><a href="#"><p class="large-txt">Sendgrid Gateway</p> <p class="small-txt">Python/Tornado</p></a></li>
+								<li class="portfolio-item"><a href="#"><p class="large-txt">Sendgrid Gateway</p> <p class="small-txt">Python/Tornado</p></a></li>
 								<li class="divider"></li>
-								<li><a href="#"><p class="large-txt">The Maize &amp; Blue Fund</p> <p class="small-txt">HTML, CSS, JavaScript<p></a></li>
+								<li class="portfolio-item"><a href="#"><p class="large-txt">The Maize &amp; Blue Fund</p> <p class="small-txt">HTML, CSS, JavaScript</p></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -61,40 +67,15 @@
 			</div>
 		</div>
 
-
 		{% block modals %}{% endblock %}
 
-		<script type="text/javascript" src="{% static 'js/libs/jquery-1.10.2.min.js' %}" charset="utf-8"></script>
-		<!--<script src="http://code.jquery.com/jquery-1.9.0.js"></script>-->
-		<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
-		<script type="text/javascript" src="{% static 'js/libs/bootstrap.min.js' %}" charset="utf-8"></script>
-		<script type="text/javascript" src="{% static 'js/libs/jquery.dataTables.min.js' %}" charset="utf-8"></script>
-		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-		<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
-		<!--
-		<div id="mbsy_iframe_container"></div>
-
 		<script type="text/javascript">
-		 var _prms = [], _prmsc1 = [], _prmsc2 = [];
-		_prms.push("mkuchen","8455","I%20thought%20you%20would%20like%20Ambassador%20--%20it's%20simple%2C%20intuitive%20referral%20software%20for%20businesses.%20%20To%20get%2010%25%20off%2C%20use%20my%20referral%20link%3A","Increase%20your%20Social%20Marketing%20ROI%20with%20Ambassador.%20Ambassador%20gives%20you%20the%20tools%20to%20turn%20your%20customers%20into%20Brand%20Ambassadors.%20Sign%20up%20for%20a%20free%20trial%3A","Looking%20for%20Social%20Media%20ROI%3F%20Check%20out%20Ambassador%20and%20get%2010%25%20off%20for%20a%20limited%20time..%20%23ambassador","1","#FFF","Use%20this%20software%20to%20turn%20customers%20into%20Brand%20Ambassadors","100","1");
-		_prmsc1.push("#9f200b","#bf1a0d","#751607","#FFF");
-		_prmsc2.push("dark","150","bottom");(function() {
-		     var fm = document.createElement('script'); fm.type = 'text/javascript'; fm.async = true;
-		     fm.src = 'https://mbsy.co/frame/embed_v2.js';
-		     var s = document.getElementsByTagName('script')[0]; s.parentNode.appendChild(fm, s);
-		 })();
-		</script>
-		-->
-		{% if slide %}
-		<script type="text/javascript">
-			$(document).ready(function() {
-				// nav slide in
-				$("div#header-outer").animate( {left:'0'}, 1600 );
+			$( document ).ready(function() {
+				$( ".dropdown" ).click(function() {
+					window.location = '/portfolio/';
+				});
 			});
 		</script>
-		{% endif %}
-		{% block javascript %}
-
-		{% endblock %}
+		{% block javascript %}{% endblock %}
 	</body>
 </html>

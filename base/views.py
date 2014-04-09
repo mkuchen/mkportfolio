@@ -58,12 +58,17 @@ class HomeView(View):
 	template_name = 'base/home.html'
 
 	def get(self, request, *args, **kwargs):
-		member = Member.objects.get(pk=1)
+		#member = Member.objects.get(pk=1)
 		context = {
-					'member':member,
-					'one':'true',
-				}
-		if request.GET.get('slide', ''):
-			context['slide'] = True
+			'page':'home',
+		}
 		return render(request, self.template_name, context)
 
+class PortfolioView(View):
+	template_name = 'base/portfolio_base.html'
+
+	def get(self, request, *args, **kwargs):
+		context = {
+			'page':'portfolio',
+		}
+		return render(request, self.template_name, context)
