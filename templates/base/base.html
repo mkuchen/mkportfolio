@@ -28,10 +28,12 @@
 			<div id="header-outer">
 				<div id="header-inner">
 					<div id="profile-block">
-						<div id="picture-block">
-							<p id="name"> Mitchell Kuchenberg </p>
-							<img id="profile-image" src="{% static 'img/mitch.jpg' %}" alt="profile-pic" width="50" height="50">
-						</div>
+						<a href="/">
+							<div id="picture-block">
+								<p id="name"> Mitchell Kuchenberg </p>
+								<img id="profile-image" src="{% static 'img/mitch.jpg' %}" alt="profile-pic" width="50" height="50">
+							</div>
+						</a>
 					</div>
 					<div id="social">
 						<a href="https://github.com/mkuchen/">
@@ -48,13 +50,13 @@
 						<li class="main-item" style="width:104px"><a class="main-link{% if page == 'home' %} active{% endif %}" href="/"> About </a></li>
 						<!--<li class="main-item" style="width:117px"><a class="main-link{% if 'page' == 'home' %} active{% endif %}" href="#"> Articles </a></li>-->
 						<li class="dropdown main-item">
-							<a data-toggle="dropdown" class="dropdown-toggle main-link {% if page == 'portfolio' %} active{% endif %}" href="/portfolio/"> Portfolio <b class="caret"></b></a>
+							<a data-toggle="dropdown" id="portfolio-link" class="dropdown-toggle main-link {% if page == 'portfolio' %} active{% endif %}"> Portfolio <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li class="portfolio-item"><a href="#"><p class="large-txt">Ambassador's Engineering Challenge</p> <p class="small-txt">Python/Django</p></a></li>
+								<li class="portfolio-item one"><a><p class="large-txt">Ambassador's Engineering Challenge</p> <p class="small-txt">Python/Django</p></a></li>
 								<li class="divider"></li>
-								<li class="portfolio-item"><a href="#"><p class="large-txt">Sendgrid Gateway</p> <p class="small-txt">Python/Tornado</p></a></li>
+								<li class="portfolio-item two"><a><p class="large-txt">Sendgrid Gateway</p> <p class="small-txt">Python/Tornado</p></a></li>
 								<li class="divider"></li>
-								<li class="portfolio-item"><a href="#"><p class="large-txt">The Maize &amp; Blue Fund</p> <p class="small-txt">HTML, CSS, JavaScript</p></a></li>
+								<li class="portfolio-item three"><a><p class="large-txt">The Maize &amp; Blue Fund</p> <p class="small-txt">HTML, CSS, JavaScript</p></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -71,8 +73,8 @@
 
 		<script type="text/javascript">
 			$( document ).ready(function() {
-				$( ".dropdown" ).click(function() {
-					window.location = '/portfolio/';
+				$( "#portfolio-link" ).click(function() {
+					window.location = '/portfolio/?item=1';
 				});
 			});
 		</script>

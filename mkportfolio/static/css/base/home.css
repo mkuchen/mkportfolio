@@ -197,7 +197,7 @@ h3.banner-text {
 
 #hero-bottom {
 	background: #222222;
-	height: 26px;
+	height: 60px;
 	width: 100%;
 	border-top: 2px solid #F78D3F;
 	-webkit-box-shadow: 0px -4px 11px rgba(50, 50, 50, 0.5);
@@ -234,7 +234,7 @@ h3.banner-text {
 }
 */
 .hero:after {
-	background: url(/static/img/big-dash.png) repeat;
+	/*background: url(/static/img/big-dash.png) repeat;*/
 	bottom: 32px;
 	content: "";
 	height: 2px;
@@ -247,7 +247,7 @@ h3.banner-text {
 }
 
 .hero .globe {
-	background: url(/static/img/world.png) no-repeat center center;
+	/*background: url(/static/img/world.png) no-repeat center center;*/
 	left: 50%;
 	margin: -576px 0 0 -576px;
 	position: absolute;

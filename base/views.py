@@ -58,7 +58,6 @@ class HomeView(View):
 	template_name = 'base/home.html'
 
 	def get(self, request, *args, **kwargs):
-		#member = Member.objects.get(pk=1)
 		context = {
 			'page':'home',
 		}
@@ -68,7 +67,14 @@ class PortfolioView(View):
 	template_name = 'base/portfolio_base.html'
 
 	def get(self, request, *args, **kwargs):
+		item = request.GET.get('item', '')
 		context = {
 			'page':'portfolio',
 		}
+
+		if item and item in ['1', '2', '3']:
+			context['item'] = item
+		else:
+			context['item'] = '1'
+
 		return render(request, self.template_name, context)

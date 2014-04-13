@@ -46,6 +46,12 @@
 	src: url('/static/fonts/DejaVuSerifCondensed.ttf')
 }
 
+@font-face
+{
+	font-family: ABZ;
+	src: url('/static/fonts/ABeeZee-Regular.otf')
+}
+
 
 html {
 	height: 100%;
@@ -288,7 +294,7 @@ div#wrapper-outer div#header-outer div#header-inner ul#header-list li.main-item 
 }
 
 div#wrapper-outer div#header-outer div#header-inner ul#header-list li a.main-link {
-	color: #FCD271;
+	color: #FCD271!important;
 	letter-spacing: 2px;
 	font-family: RalewayRegular;
 	font-size: 20px;
@@ -298,6 +304,10 @@ div#wrapper-outer div#header-outer div#header-inner ul#header-list li a.main-lin
 	display: block;
 	text-align: left;
 	padding-right: 4px;
+}
+
+div#wrapper-outer div#header-outer div#header-inner ul#header-list li a.main-link:visited {
+	color: #fcd271!important;
 }
 
 div#wrapper-outer div#header-outer div#header-inner ul#header-list li a.main-link:hover {

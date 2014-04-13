@@ -51,10 +51,10 @@
 		<div class="span4" id="right">
 			<h3 class="row-header"> What I do </h3>
 			<p>
-				I'm currenty an independent contractor working with all things Python/Django.  I'm especially skilled with developing Django apps on <a href="#">Heroku</a>.
+				I'm currenty an independent contractor working with all things Python/Django.  I'm especially fond of developing Django apps on <a href="#">Heroku</a>.
 			<br>
 			<br>
-				I am taking on projects at the moment, so send a raven if you think we could make cool stuff together.
+				I am taking on projects at the moment, so <a href="#">send a raven</a> if you think we could make cool stuff together.
 			</p>
 		</div>
 	</div>
@@ -65,6 +65,15 @@
 	<script type="text/javascript">
 		$( document ).ready(function() {
 		    $( ".char" ).css( "visibility", "visible" ).css( "opacity", "1").css( "top", "0");
+			$( ".one" ).click(function() {
+				window.location = '/portfolio/?item=1';
+			});
+			$( ".two" ).click(function() {
+				window.location = '/portfolio/?item=2';
+			});
+			$( ".three" ).click(function() {
+				window.location = '/portfolio/?item=3';
+			});
 		});
 	</script>
 {% endblock %}
