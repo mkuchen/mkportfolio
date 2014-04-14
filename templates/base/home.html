@@ -65,14 +65,18 @@
 	<script type="text/javascript">
 		$( document ).ready(function() {
 		    $( ".char" ).css( "visibility", "visible" ).css( "opacity", "1").css( "top", "0");
+
 			$( ".one" ).click(function() {
 				window.location = '/portfolio/?item=1';
+				return false;
 			});
 			$( ".two" ).click(function() {
 				window.location = '/portfolio/?item=2';
+				return false;
 			});
 			$( ".three" ).click(function() {
 				window.location = '/portfolio/?item=3';
+				return false;
 			});
 		});
 	</script>

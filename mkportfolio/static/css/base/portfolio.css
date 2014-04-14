@@ -360,9 +360,8 @@ div.item div.item-img p {
 
 .slide-hidden {
 	display: none;
-	left: 1000px;
+	left: 2000px;
 	opacity: 0;
-	
 }
 
 .first, .second, .third {
